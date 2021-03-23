@@ -17,7 +17,7 @@
 <body>
 <dl class="admin_login">
     <dt>
-        <strong>站点后台管理系统</strong>
+        <strong>旅游后台管理系统</strong>
         <em>Management System</em>
     </dt>
     <dd class="user_icon">

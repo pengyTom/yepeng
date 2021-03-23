@@ -42,6 +42,11 @@ public class IndexController {
         return "index/product_list";
     }
 
+    /**
+     * 索引主页面
+     * @param model
+     * @return
+     */
     @RequestMapping("/indexView")
     public String indexView(Model model){
         List<Product> productList=productService.getIndexproduct(6);
@@ -51,6 +56,10 @@ public class IndexController {
         return "index/index";
     }
 
+    /**
+     * 用户信息搜索页面
+     * @return
+     */
     @RequestMapping("/userinfoView")
     public String userinfoView(){
         return "index/user_info";
@@ -67,6 +76,10 @@ public class IndexController {
         return "index/plist";
     }
 
+    /**
+     * 后台登录主页面
+     * @return
+     */
     @RequestMapping("/adminLoginView")
     public String adloginView(){
         return "backend/admin_login";

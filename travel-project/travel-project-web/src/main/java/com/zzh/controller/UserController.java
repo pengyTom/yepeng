@@ -77,6 +77,7 @@ public class UserController {
 
         ServerResponse<User> response= userService.logion(username,password);
         if (response.isSuccess()){
+            //登录成功之后，将用户信息
             //将用户数据存储进入session域中，用于数据共享  response.getData()---得到的是get User(username,password)
             session.setAttribute(Const.CURRENT_USER,response.getData());
         }
@@ -94,13 +95,18 @@ public class UserController {
     @ResponseBody
     public ServerResponse<User> adminLogin(String username, String password, HttpSession session){
 
+        System.out.println("用户名："+username);
+        System.out.println("用户密码："+password);
         ServerResponse<User> response= userService.logion(username,password);
 
         if (response.isSuccess()){
             //1超级管理员   10 普通用户
-            if (response.getData().getRole()>=10){
-                return ServerResponse.createByErrorMessage("请登录管理员用户");
-            }
+            User user = response.getData();
+           if (user!=null){
+               if (user.getRole()>=10){
+                   return ServerResponse.createByErrorMessage("请登录管理员用户");
+               }
+           }
             session.setAttribute(Const.ADMIN_USER,response.getData());
         }
         return  response;
@@ -112,6 +118,12 @@ public class UserController {
         return ServerResponse.createByResult(userService.updateById(user));
     }
 
+    /**
+     * 用户信息的更新
+     * @param session
+     * @param model
+     * @return
+     */
     @RequestMapping("/updateView")
     public String updateView(HttpSession session, Model model){
         User user = (User)session.getAttribute(Const.CURRENT_USER);
