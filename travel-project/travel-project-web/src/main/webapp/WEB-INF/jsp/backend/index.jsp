@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>后台首页</title>
+    <title>旅游后台首页</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link href="/assets/css/font-awesome.css" rel="stylesheet" />
     <!-- Morris Chart Styles-->

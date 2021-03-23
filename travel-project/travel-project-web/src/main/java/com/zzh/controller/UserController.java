@@ -76,6 +76,7 @@ public class UserController {
     public ServerResponse<User> login(String username, String password, HttpSession session){
 
         ServerResponse<User> response= userService.logion(username,password);
+        User user = response.getData();
         if (response.isSuccess()){
             //登录成功之后，将用户信息
             //将用户数据存储进入session域中，用于数据共享  response.getData()---得到的是get User(username,password)

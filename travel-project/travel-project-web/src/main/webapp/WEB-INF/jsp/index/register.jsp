@@ -6,7 +6,7 @@
 %>
 <html>
 <head>
-    <title>注册</title>
+    <title>游客注册</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
 </head>
@@ -49,6 +49,24 @@
                         <span ></span>
                     </div>
                 </div>
+                <!--性别-->
+                <div class="form-group">
+                    <label for="male">性别:</label>
+                    <label class="radio-inline">
+                        <input type="radio" value="male" name="sex" checked="checked" id="male">男
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="female" name="sex">女
+                    </label>
+                </div>
+
+                <!--电话号码-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="phone" placeholder="联系方式" name="phone">
+                    <div class="messagebox">
+                        <span ></span>
+                    </div>
+                </div>
                 <div class="form-group">
                     <input type="submit" id="registerBtn" class="form-control btn btn-success" value="注册">
                 </div>
@@ -87,6 +105,7 @@
             var password = $("#password").val();
             var email=$("#email").val();
             var yzm=$("#yzm").val();
+            var phone=${"#phone"}.val();
 
             if(!username){
                 alert("用户名必填!");
@@ -102,12 +121,18 @@
                 alert("邮箱必填!");
                 $("#email").focus();//获取焦点
                 return false;
-            }if(!yzm){
+            }
+            if(!yzm){
                 alert("请填写验证码!");
                 $("#yzm").focus();//获取焦点
                 return false;
             }
-            //var param = {"username":username,"password":password};
+            if (!phone){
+                alert("联系方式必填!");
+                $("#phone").focus();//获取焦点
+                return false;
+            }
+            var param = {"username":username,"password":password};
             var data = $("#form1").serialize();
             console.log(data);
             var targetUrl ="http://localhost:80/user/register";
