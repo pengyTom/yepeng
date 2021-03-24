@@ -142,5 +142,15 @@ public class UserController {
         return "index/user_info";
     }
 
+    /**
+     * 退出功能，Session杀死
+     * @param session
+     * @return
+     */
+    @RequestMapping("/logOutView")
+    public  String logOutView(HttpSession session){
+        session.invalidate();
+        return "index/index";
+    }
 }
 

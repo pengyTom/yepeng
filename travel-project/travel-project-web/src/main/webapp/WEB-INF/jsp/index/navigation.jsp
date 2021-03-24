@@ -46,6 +46,7 @@
         </c:if>
         <c:if test="${ sessionScope.currentUser!=null }">
             <span class="reg"><a href="http://localhost:80/user/updateView">个人中心</a></span>
+            <span class="reg" id="logout"><a href="http://localhost:80/user/logOutView">退出</a></span>
         </c:if>
     </div>
     <!--登录框-->

@@ -174,20 +174,20 @@
             var url="http://localhost:80/productOrder/fillView?"+"psid="+data.psid+"&num="+numbers;
             window.location.href=url;
 
-//            $.ajax({
-//                type: 'POST',
-//                url: "http://localhost:80/productOrder/create",
-//                data : {
-//                    "id" : data.psid,
-//                },
-//                success : function(result) {//返回数据根据结果进行相应的处理
-//                    if ( result.success ) {
-//                        alert('购买成功');
-//                    } else {
-//                        alert(result.msg);
-//                    }
-//                }
-//            });
+           $.ajax({
+               type: 'POST',
+               url: "http://localhost:80/productOrder/create",
+               data : {
+                   "id" : data.psid,
+               },
+               success : function(result) {//返回数据根据结果进行相应的处理
+                   if ( result.success ) {
+                       alert('购买成功');
+                   } else {
+                       alert(result.msg);
+                   }
+               }
+           });
 
         }else{
 
@@ -196,8 +196,5 @@
         }
     }
 </script>
-
-
-
 </body>
 </html>

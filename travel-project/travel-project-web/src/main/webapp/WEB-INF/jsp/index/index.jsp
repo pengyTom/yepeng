@@ -268,7 +268,7 @@
         <dl class="ft-info-col ft-info-qrcode">
             <dd>
                 <span class="ft-qrcode-tejia"></span>
-                <p>本旅游网<br>官方微博号</p>
+                <p>官方旅游网<br>官方微博号</p>
             </dd>
             <dd>
                 <span class="ft-qrcode-weixin"></span>

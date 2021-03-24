@@ -17,11 +17,10 @@
     <!--顶部用户资料显示-->
     <div class="user_info_bg">
         <div class="user_info_portrait">
-            <p class="user_info_name">${user.username}</p>
+            <p class="user_info_name"><span>客户:${user.username}</span></p>
         </div>
         <div class="user_info_msg">
-	        <span>性别：
-	            ${user.sex}       </span>
+	        <span>性别：${user.sex}</span>
             <span>手机号：${user.phone}</span>
             <span>邮箱：${user.email}</span>
         </div>

@@ -72,6 +72,7 @@ public class ProductOrderController {
 
     @RequestMapping("/orderView")
     public String myOrderListView(HttpSession session, Model model){
+        //获取当前的登录状态
         User user = (User)session.getAttribute(Const.CURRENT_USER);
         if(user == null){
             return "index/index";
