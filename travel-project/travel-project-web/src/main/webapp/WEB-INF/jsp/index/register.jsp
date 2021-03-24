@@ -105,7 +105,7 @@
             var password = $("#password").val();
             var email=$("#email").val();
             var yzm=$("#yzm").val();
-            var phone=${"#phone"}.val();
+            var phone=$("#phone").val();
 
             if(!username){
                 alert("用户名必填!");

@@ -2,6 +2,7 @@ package com.zzh.controller;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.zzh.common.Const;
 import com.zzh.common.ServerResponse;
 import com.zzh.entity.EmailValidate;
@@ -42,9 +43,9 @@ public class UserController {
     public ServerResponse<String> register (User user,String registerCode){
         System.out.println(user.toString());
         //对传参进行校验
-        if (user!=null){
+    /*    if (user!=null){
             return ServerResponse.createByError();
-        }
+        }*/
         //邮箱验证码，验证用户的邮箱和验证码是否一致
         EntityWrapper<EmailValidate> entityWrapper=new EntityWrapper<>();
         entityWrapper.eq("email",user.getEmail())
@@ -52,6 +53,14 @@ public class UserController {
         if(emailValidateService.selectCount(entityWrapper)<=0){
             return ServerResponse.createByErrorMessage("注册码错误");
         }
+        //校验用户是否存在
+        EntityWrapper<User> userEntityWrapper=new EntityWrapper<>();
+        Wrapper<User> userWrapper = userEntityWrapper.eq("email", user.getEmail());
+        User user1 = userService.selectOne(userWrapper);
+        if (user1!=null){
+            return ServerResponse.createByErrorMessage("用户已存在");
+        }
+
         //保存
         user.setCreateTime(new Date());
         //0 超级管理员   1 管理员   10 普通游客
