@@ -55,7 +55,7 @@
                     </p>
                     <div class="n_order_info clear">
                         <div class="n_order_info_tips">
-                            <a href="/Activity/detail/id/26" class="n_order_info_img">
+                            <a href="#" class="n_order_info_img">
                                 <img src="${item.picUrl}" alt="${item.title}" width="90" height="62">
                             </a>
                             <a href="http://localhost:80/product/detailView/${item.pid}" class="n_order_title ellipsis_2">${item.title}</a>
