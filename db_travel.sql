@@ -259,7 +259,7 @@ INSERT INTO `product_desc` VALUES ('155205109273196', '<section powered-by=\"xiu
 INSERT INTO `product_desc` VALUES ('155205130181007', '<p><img src=\"http://cdnstatic.201551.com/upload/15221354950016521/ueditor/201903071754163377.jpg\" alt=\"微信图片_20190307141317.jpg\">\r\n\r\n</p>', '<p><br></p>', null, null);
 INSERT INTO `product_desc` VALUES ('155206252002308', '<h1><img src=\"http://localhost/images/2019/03/09/1552062513571544.png\" style=\"max-width:100%;\"></h1>', '<p><img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/af/cry.gif\" alt=\"[衰]\" data-w-e=\"1\"></p>', null, null);
 INSERT INTO `product_desc` VALUES ('155211029138720', '<h1><img src=\"http://localhost/images/2019/03/09/1552110284522194.jpg\" style=\"max-width:100%;\" class=\"mCS_img_loaded\"></h1>', '<p><img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/af/cry.gif\" alt=\"[衰]\" data-w-e=\"1\" class=\"mCS_img_loaded\"></p>', null, null);
-INSERT INTO `product_desc` VALUES ('159029058351106', '<p>最代码网站组织的30天游<br></p>', '<p>\r\n最代码网站组织的30天游\r\n\r\n</p>', null, null);
+INSERT INTO `product_desc` VALUES ('159029058351106', '<p>哈哈哈<br></p>', '<p>\r\n哈哈哈哈\r\n\r\n</p>', null, null);
 
 -- ----------------------------
 -- Table structure for product_order

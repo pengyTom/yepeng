@@ -152,5 +152,16 @@ public class UserController {
         session.invalidate();
         return "index/index";
     }
+
+    /**
+     * 我的消息，功能开发
+     * @param session
+     * @return
+     */
+    @RequestMapping("/message")
+    public String message(HttpSession session,Model model){
+
+        return "index/message";
+    }
 }
 

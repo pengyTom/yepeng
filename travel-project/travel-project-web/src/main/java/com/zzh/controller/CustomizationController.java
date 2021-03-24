@@ -44,7 +44,13 @@ public class CustomizationController {
     }
 
 
-    @RequestMapping("listView")
+    /**
+     * 个性化定制处理数据
+     * @param session
+     * @param model
+     * @return
+     */
+    @RequestMapping("/listView")
     public String listView(HttpSession session, Model model){
         User user = (User)session.getAttribute(Const.CURRENT_USER);
         if(user == null){

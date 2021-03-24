@@ -46,7 +46,7 @@
         <!--用户中心左侧菜单-->
         <ul class="userinfo_left fl">
             <li class="active" ><span class="icon_user"></span><a href="http://localhost:80/user/updateView">个人信息</a></li>
-            <li  ><span class="icon_msg"></span><a href="/User/message">我的消息</a></li>
+            <li  ><span class="icon_msg"></span><a href="http://localhost:80/user/message">我的消息</a></li>
             <li  ><span class="icon_order"></span><a href="http://localhost:80/productOrder/orderView">我的订单</a></li>
             <li  ><span class="icon_custom"></span><a href="http://localhost:80/customization/listView">我的定制</a></li>
 
@@ -55,9 +55,9 @@
 
         <div class="userinfo_right fr">
             <ul class="user_right_nav">
-                <li class="user_right_tab active"><a href="/User/index">个人资料</a></li>
-                <li class="user_right_tab"><a href="/User/binding">账号绑定</a></li>
-                <li class="user_right_tab"><a href="/User/editpass">密码修改</a></li>
+                <li class="user_right_tab active"><a href="http://localhost:80/user/message">个人资料</a></li>
+                <li class="user_right_tab"><a href="http://localhost:80/user/message">账号绑定</a></li>
+                <li class="user_right_tab"><a href="http://localhost:80/user/message">密码修改</a></li>
             </ul>
 
             <form id="form1"  method="post" onsubmit=" false" class="user_information">

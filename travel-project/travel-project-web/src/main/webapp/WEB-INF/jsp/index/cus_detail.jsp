@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -52,14 +51,14 @@
                             <span class="icon_edit"></span>定制需求
                         </td>
                     </tr>
-                    <!-- <tr>
+                    <tr>
                         <td class="need td_pt_50 td_w_120"></td>
                         <td class="user_form_txt td_pt_50 verticaltop"> 定制类型</td>
                         <td class="user_form_input td_pt_50" id="user_copy">
                             <label for="" class="customtype" type="1">个人定制</label>
                             <label for="" class="customtype active" type="2">团体定制</label>
                         </td>
-                    </tr> -->
+                    </tr>
                     <tr>
                         <td class="need td_w_120 td_pt_50"></td>
                         <td class="user_form_txt td_pt_50"> 联系人</td>
