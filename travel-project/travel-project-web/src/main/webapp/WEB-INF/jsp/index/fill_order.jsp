@@ -23,7 +23,7 @@
                 <h2>${product.title}</h2>
                 <div class="clear theme_s_wrap">
                     <div class="info_list_img">
-                        <img src="${product.mainImage}">
+                        <img src="/img/${product.mainImage}">
                     </div>
                     <!--文字说明-->
                     <div class="info_desc_txt">

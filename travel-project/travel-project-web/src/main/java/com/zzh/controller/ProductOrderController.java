@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -107,6 +108,7 @@ public class ProductOrderController {
             return "index/index";
         }
         ProductSell productSell=productSellService.selectById(psid);
+        productSell.setStartDate(new Date());
         Product product=productService.selectById(productSell.getPid());
         model.addAttribute("productSell",productSell);
         model.addAttribute("product",product);
