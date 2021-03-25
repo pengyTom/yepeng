@@ -150,6 +150,7 @@
 
     });
 
+    /*后代选择器*/
     $(".custom-feature>li").on("click",function(){
         var url="http://localhost:80/product/list2";
         var v=$(this).attr("value");
