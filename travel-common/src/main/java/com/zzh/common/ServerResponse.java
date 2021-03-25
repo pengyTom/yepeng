@@ -9,7 +9,6 @@ import java.io.Serializable;
  * 服务器的返回值的数据信息
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-//保证序列化json的时候,response返回给前端的时候，保证返回值
 public class ServerResponse <T> implements Serializable{
 
     private int status;
