@@ -69,11 +69,10 @@
             <c:forEach begin='0' end='2'  items='${productList}' var='item'>
                 <div class="col-xs-4 col-md-4">
                     <div class="modalImage">
-                        <div class="images"><img src="${item.mainImage}"></div>
+                        <div class="images"><img src="/img/${item.mainImage}"></div>
                         <div class="imageInfo">
                             <div class="viewSpots">
                                     <a href="http://localhost:80/product/detailView/${item.pid}">${item.title}</a>
-
 
                             </div>
                             <div class="linkList">
