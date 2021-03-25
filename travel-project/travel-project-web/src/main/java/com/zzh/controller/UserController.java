@@ -9,6 +9,7 @@ import com.zzh.entity.EmailValidate;
 import com.zzh.entity.User;
 import com.zzh.service.IEmailValidateService;
 import com.zzh.service.IUserService;
+import com.zzh.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -117,6 +118,7 @@ public class UserController {
                    return ServerResponse.createByErrorMessage("请登录管理员用户");
                }
            }
+           //管理员账户存入到session中
             session.setAttribute(Const.ADMIN_USER,response.getData());
         }
         return  response;

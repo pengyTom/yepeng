@@ -44,7 +44,7 @@ public class IndexController {
     }
 
     /**
-     * 索引主页面
+     * 首页主页面
      * @param model
      * @return
      */

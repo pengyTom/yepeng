@@ -13,6 +13,12 @@
 <body>
 <%@ include file="nav.jsp"%>
 
+<c:if test="${ sessionScope.adminUser==null }">
+    <script>
+        alert("未登录，请先登录！");
+        window.location.href="http://localhost:80/admin/index";
+    </script>
+</c:if>
 
 <section class="rt_wrap content mCustomScrollbar">
     <div class="rt_content">

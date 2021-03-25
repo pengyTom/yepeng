@@ -80,6 +80,7 @@
                             </li>
                             <li>
                                 <span class="info_attr_txt">订购数量</span>
+                                <!--type值为number得情况，h5新增得功能-->
                                 <span class="info_attr_val"><input id="pnumber" name="pnumber" type="number" min="1" value="1"></span>
                             </li>
                             <li class="info_feature">
@@ -90,10 +91,8 @@
                             </li>
                         </ul>
 
-                        <!-- 容器布局 -->
+                        <!-- 容器布局 大部分在数据库已经存储-->
                         <div class="calendar-box demo-box"></div>
-
-
 
                     </div>
                     <!--文字说明 end-->
