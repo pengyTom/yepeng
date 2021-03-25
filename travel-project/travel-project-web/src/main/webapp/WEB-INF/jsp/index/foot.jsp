@@ -3,13 +3,11 @@
     <div class="ft-content">
         <dl class="ft-info-col ft-info-about">
             <dt>关于我们</dt>
-            <dd><a>关于本网站</a></dd>
-            <dd><a>网络信息侵权通知指引</a></dd>
+            <dd><a>网站声明</a></dd>
+            <dd><a>网络信息侵权指引</a></dd>
             <dd><a>隐私政策</a></dd>
             <dd><a>服务协议</a></dd>
             <dd><a>联系我们</a></dd>
-            <dd><a>加入我们</a></dd>
-            <dd><a>test测试</a></dd>
         </dl>
 
         <dl class="ft-info-col ft-info-service">
@@ -19,7 +17,6 @@
             <dd><a>旅游问答</a></dd>
             <dd><a>旅游保险</a></dd>
             <dd><a>旅游资讯</a></dd>
-            <dd><a>旅游指南</a></dd>
         </dl>
         <dl class="ft-info-col ft-info-qrcode">
             <dd>
