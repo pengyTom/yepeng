@@ -31,10 +31,10 @@ public class MpTest {
      */
     @Test
     public  void test1() throws IOException {
-        String reg_phone="^((13[0-9])|(14[0-9])|(15([0-9]))|(16)(0-9)|(17[0-9])|(18[0-9])|(19[0-9]))\\d{8}$";
+        String reg_phone="((13[0-9])|(14[0-9])|(15([0-9]))|(16)(0-9)|(17[0-9])|(18[0-9])|(19[0-9]))\\d{8}";
         System.out.println("17879525966".matches(reg_phone));
 
-        String reg_email="^\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
+        String reg_email="\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
         System.out.println("1226282544@qq.com".matches(reg_email));
     }
 }

@@ -34,7 +34,7 @@
         <!--用户中心左侧菜单-->
         <ul class="userinfo_left fl">
             <li  ><span class="icon_user"></span><a href="http://localhost:80/user/updateView">个人信息</a></li>
-            <li  ><span class="icon_msg"></span><a href="/User/message">我的消息</a></li>
+            <li  ><span class="icon_msg"></span><a href="localhost:80/user/message">我的消息</a></li>
             <li  ><span class="icon_order"></span><a href="http://localhost:80/productOrder/orderView">我的订单</a></li>
             <li  class="active" ><span class="icon_custom "></span><a href="http://localhost:80/customization/listView">我的定制</a></li>
 
