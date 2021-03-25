@@ -47,7 +47,7 @@ $(function () {
         }
     });
 
-	//登录注册的页面显示和跳转
+	//登录绑定点击事件
     $('.login').click(function () {
         $("#myModal").modal("show");
     });

@@ -550,9 +550,9 @@ a:hover {
     margin: 0 0 8px 6px;
 }
 #footer .ft-qrcode-tejia {
-    background: url(../images/sina.png) no-repeat;
+    background: url(../images/qrname1.png) no-repeat;
 }
 
 #footer .ft-qrcode-weixin{
-    background: url(../images/wechat.png) no-repeat;
+    background: url(../images/qrname2.png) no-repeat;
 }

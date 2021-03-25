@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="fpsd">
-                        <a href="#">忘记密码</a>
+                        <a href="http://localhost:80/user/message">忘记密码</a>
                     </div>
                 </div>
 
