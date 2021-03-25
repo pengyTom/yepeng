@@ -20,7 +20,7 @@
     <table></table>
     <div id="content" class="clear">
 
-        <!-- 条件筛选-->
+        <!-- 筛选-->
         <div class="search-main">
 
             <div class="seting" style="margin-bottom: 20px">
