@@ -63,6 +63,17 @@ public class UserController {
             return ServerResponse.createByErrorMessage("用户已存在，请登录！");
         }
 
+        //正则邮箱
+        String reg_email="/^([a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9])$/";
+        if (reg_email.equals(user.getEmail())){
+            return ServerResponse.createBySuccessMessage("邮箱格式不对！");
+        }
+        //正则手机号
+        String reg_phone="/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\\d{8}$/";
+        if (reg_phone.matches(user.getPhone())){
+            return ServerResponse.createBySuccessMessage("手机号格式不对！");
+        }
+
         if (user.insert()){
             //注册得数据存入到Session中用于鉴定是否存在已经登录得标志
             session.setAttribute(Const.CURRENT_USER,user);
