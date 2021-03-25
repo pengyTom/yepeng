@@ -31,11 +31,10 @@ public class MpTest {
      */
     @Test
     public  void test1() throws IOException {
-        /*CloseableHttpClient httpClient= HttpClients.createDefault();
-        HttpGet httpget = new HttpGet("http://www.baidu.com");
-        CloseableHttpResponse response = httpClient.execute(httpget);*/
-  /*      HttpEntity entity = response.getEntity();
-        String strResult = EntityUtils.toString(entity);
-        System.out.println(strResult);*/
+        String reg_phone="^((13[0-9])|(14[0-9])|(15([0-9]))|(16)(0-9)|(17[0-9])|(18[0-9])|(19[0-9]))\\d{8}$";
+        System.out.println("17879525966".matches(reg_phone));
+
+        String reg_email="^\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
+        System.out.println("1226282544@qq.com".matches(reg_email));
     }
 }

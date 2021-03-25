@@ -59,17 +59,19 @@ public class UserController {
         //0 超级管理员   1 管理员   10 普通游客
         user.setRole(10);
 
-        if (user.getEmail().equals(user1.getEmail())){
-            return ServerResponse.createByErrorMessage("用户已存在，请登录！");
-        }
+       if (user1!=null){
+           if (user.getEmail().equals(user1.getEmail())){
+               return ServerResponse.createByErrorMessage("用户已存在，请登录！");
+           }
+       }
 
         //正则邮箱
-        String reg_email="/^([a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9])$/";
-        if (reg_email.equals(user.getEmail())){
+        String reg_email="^\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
+        if (reg_email.matches(user.getEmail())){
             return ServerResponse.createBySuccessMessage("邮箱格式不对！");
         }
         //正则手机号
-        String reg_phone="/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\\d{8}$/";
+        String reg_phone="^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-8]|18[0-9]|19[0-9])\\d{8}$";
         if (reg_phone.matches(user.getPhone())){
             return ServerResponse.createBySuccessMessage("手机号格式不对！");
         }
