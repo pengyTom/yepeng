@@ -21,7 +21,7 @@
                 <h2>${product.title}</h2>
                 <div class="clear theme_s_wrap">
                     <div class="info_list_img">
-                        <img src="${product.mainImage}">
+                        <img src="/img/${product.mainImage}">
                     </div>
                     <!--文字说明-->
                     <div class="info_desc_txt">
@@ -54,12 +54,12 @@
                     <div class="order_myinfo">
                         <table class="payment_table" cellspacing="0">
                             <thead>
-                            <tr>
-                                <th>出发时间</th>
-                                <th>订购数量</th>
-                                <th>联系人</th>
-                                <th>手机号</th>
-                                <th>备注</th>
+                            <tr >
+                                <th style="text-align: center">出发时间</th>
+                                <th style="text-align: center">订购数量</th>
+                                <th style="text-align: center">联系人</th>
+                                <th style="text-align: center">手机号</th>
+                                <th style="text-align: center">备注</th>
                             </tr>
                             </thead>
                             <tbody>

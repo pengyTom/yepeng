@@ -142,8 +142,8 @@
             }else{
                 console.log('未传入beginDate或endDate！');
             }
-            //加载容器
-            calendarDate.container = '<div class="ht-rili-querybox"><strong class="ht-rili-title">'+ opt.title +'</strong><div class="ht-rili-datebox"><span class="ht-rili-leftarr"></span><span class="ht-rili-date"></span><span class="ht-rili-rightarr"></span></div></div><div class="ht-rili-head"><div class="ht-rili-th">周日</div><div class="ht-rili-th">周一</div><div class="ht-rili-th">周二</div><div class="ht-rili-th">周三</div><div class="ht-rili-th">周四</div><div class="ht-rili-th">周五</div><div class="ht-rili-th">周六</div></div><div class="ht-rili-body"><!--<div class="ht-rili-td"><span class="ht-rili-day">1</span><span class="ht-rili-money">&yen;100</span></div>--></div>'
+          /*  加载日历容器,日历的显示部分*/
+            calendarDate.container = '<div class="ht-rili-querybox"><strong class="ht-rili-title">'+ opt.title +'</strong><div class="ht-rili-datebox"><span class="ht-rili-leftarr"></span><span class="ht-rili-date"></span><span class="ht-rili-rightarr"></span></div></div><div class="ht-rili-head"><div class="ht-rili-th">周日</div><div class="ht-rili-th">周一</div><div class="ht-rili-th">周二</div><div class="ht-rili-th">周三</div><div class="ht-rili-th">周四</div><div class="ht-rili-th">周五</div><div class="ht-rili-th">周六</div></div><div class="ht-rili-body"><div class="ht-rili-td"><span class="ht-rili-day">1</span><span class="ht-rili-money">&yen;100</span></div></div>'
             $(opt.ele).append(calendarDate.container);
             $('.ht-rili-date').html(calendarDate.year+'年 '+calendarDate.month+'月');
 

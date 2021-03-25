@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,6 +38,7 @@ public class ProductSellServiceImpl extends ServiceImpl<ProductSellMapper, Produ
         List<PriceCalendar> priceCalendars=new ArrayList<>();
         for (ProductSell productSell:productSellList){
             PriceCalendar priceCalendar=new PriceCalendar(productSell.getStartDate(),productSell.getpPrice(),productSell.getId());
+            priceCalendar.setDate(new Date());
             priceCalendars.add(priceCalendar);
         }
         System.out.println("after splicing:"+priceCalendars);
