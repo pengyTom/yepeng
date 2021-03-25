@@ -29,7 +29,7 @@
 <div class="discovery_banner customtailor_banner theme-banner">
     <div class="custom_banner_wrap">
         <form  class="customForm" onsubmit="false">
-            <input type="text"  id="keyword" class="custom-search" autocomplete="off" placeholder="你要去哪儿？"  />
+            <input type="text"  id="keyword" class="custom-search" autocomplete="off" placeholder="世界那么大,你要去哪儿？"  />
         </form>
 
         <a href="http://localhost:80/customized" class="more-custom">获得更多专业定制&gt;&gt;</a>
@@ -94,7 +94,6 @@
             </div>
         </div>
         <!-- 周边游 end-->
-        <!-- 国内游-->
         <div class="custom-around">
             <div class="custom-top">
                 <div class="custom-lt">
@@ -107,7 +106,6 @@
             <div class="tour-content ">
                 <div class="ct-cn">
                     <ul class="ct-lg civil-content">
-
 
                     </ul>
                 </div>
@@ -134,7 +132,7 @@
         font-size:16px;
         font-style:normal;
         -webkit-font-smoothing: antialiased;
-        -webkit-text-stroke-width: 0.2;
+        -webkit-text-stroke-width: 0.2px;
         -moz-osx-font-smoothing: grayscale;
         padding-left:20px
     }
@@ -204,13 +202,14 @@
     }
 
 
+    /*特色旅游*/
     function showDataHtml1(obj){
         var html="";
         $(".feature-content").html(html);
         $.each(obj,function(i,item){
             html+=`<li>
                    <a href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-img">
-                        <img class="lazy" src="`+item.mainImage+`" >
+                         <img class="lazy" src="`+'/img/'+item.mainImage+`" >
                     </a>
                     <div class="ct-td">
                         <a href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-title">`+item.title+`</a>
@@ -222,13 +221,14 @@
         $(".feature-content").html(html);
     }
 
+    /*旅行天数*/
     function showDataHtml2(obj){
         var html="";
 
         $.each(obj,function(i,item){
             html+=`<li>
                    <a href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-img">
-                        <img class="lazy" src="`+item.mainImage+`" >
+                         <img class="lazy" src="`+'/img/'+item.mainImage+`" >
                     </a>
                     <div class="ct-td">
                         <a href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-title">`+item.title+`</a>
@@ -240,13 +240,14 @@
         $(".rim-content").html(html);
     }
 
+    /*热门旅游*/
     function showDataHtml3(obj){
         var html="";
 
         $.each(obj,function(i,item){
             html+=`<li>
                    <a href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-img">
-                        <img class="lazy" src="`+item.mainImage+`" >
+                        <img class="lazy" src="`+'/img/'+item.mainImage+`" >
                     </a>
                     <div class="ct-td">
                         <a  href="http://localhost:80/product/detailView/`+item.pid+`" class="ct-title">`+item.title+`</a>

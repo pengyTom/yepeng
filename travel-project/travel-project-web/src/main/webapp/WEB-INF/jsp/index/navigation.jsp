@@ -21,7 +21,8 @@
 </style>
 <script>
     function openUrl() {
-        window.open("http://wpa.qq.com/msgrd?v=3&uin=2110825316&site=qq&menu=yes","_blank");
+        alert("请联系客服小姐姐，热线电话:88888");
+        /*window.open("http://wpa.qq.com/msgrd?v=3&uin=2110825316&site=qq&menu=yes","_blank");*/
     }
 
 </script>
