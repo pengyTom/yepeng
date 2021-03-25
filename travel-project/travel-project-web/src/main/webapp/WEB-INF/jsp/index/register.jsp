@@ -147,7 +147,7 @@
                 dataType:'json',
                 success:function(result){
                     if(result.status==200){
-                        alert("注册成功");
+                        alert("注册成功,3秒后跳转到主页!");
                         window.location.href="http://localhost:80/indexView";
                     }else{
                         alert("验证码错误");
