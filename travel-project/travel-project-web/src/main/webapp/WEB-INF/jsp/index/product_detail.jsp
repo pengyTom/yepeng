@@ -50,7 +50,7 @@
                     <!--图片列表-->
                     <div class="info_list_img">
                         <div class="info_big_img">
-                            <img src="${product.mainImage}" width="466" />
+                            <img src="/img/${product.mainImage}" width="466" />
                         </div>
 
 

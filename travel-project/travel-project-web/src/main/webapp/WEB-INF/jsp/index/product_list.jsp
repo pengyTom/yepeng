@@ -45,7 +45,7 @@
                             <select  name="type">
                                 <option value="全部">全部</option>
                                 <c:forEach items="${themes}" var="item" >
-                                    <option value="${item.themeName}" >${item.themeName}</option>
+                                    <option value="/img/${item.themeName}" >${item.themeName}</option>
                                 </c:forEach>
                             </select>
                         </div>
@@ -156,7 +156,7 @@
                                         "<div class='details-list'>"+
                                         "<a href='http://localhost:80/product/detailView/"+item.pid+"'>"+
                                         "<div class='details-img'>"+
-                                        "<img src='"+item.mainImage+"' width='100%' height='100%'>"+
+                                        "<img src='"+'/img/'+item.mainImage+"' width='100%' height='100%'>"+
                                         "</div>"+
                                         "</a>"+
                                         "<a href='http://localhost:80/product/detailView/"+item.pid+"'>"+
