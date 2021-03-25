@@ -146,13 +146,13 @@
                 data:data,
                 dataType:'json',
                 success:function(result){
+                    /*var newData = JSON.stringify(result);*/
                     if(result.status==200){
-                        alert("注册成功,3秒后跳转到主页!");
+                        alert(result.msg);
                         window.location.href="http://localhost:80/indexView";
                     }else{
-                        alert("验证码错误");
+                        alert(result.msg);
                     }
-
                 },
                 error:function(error){
                     console.log(error);

@@ -40,12 +40,8 @@ public class UserController {
      */
     @PostMapping("/register")
     @ResponseBody
-    public ServerResponse<String> register (User user,String registerCode){
+    public ServerResponse<String> register (User user,String registerCode,HttpSession session){
         System.out.println(user.toString());
-        //对传参进行校验
-    /*    if (user!=null){
-            return ServerResponse.createByError();
-        }*/
         //邮箱验证码，验证用户的邮箱和验证码是否一致
         EntityWrapper<EmailValidate> entityWrapper=new EntityWrapper<>();
         entityWrapper.eq("email",user.getEmail())
@@ -57,18 +53,22 @@ public class UserController {
         EntityWrapper<User> userEntityWrapper=new EntityWrapper<>();
         Wrapper<User> userWrapper = userEntityWrapper.eq("email", user.getEmail());
         User user1 = userService.selectOne(userWrapper);
-        if (user1!=null){
-            return ServerResponse.createByErrorMessage("用户已存在");
-        }
 
         //保存
         user.setCreateTime(new Date());
         //0 超级管理员   1 管理员   10 普通游客
         user.setRole(10);
+
+        if (user.getEmail().equals(user1.getEmail())){
+            return ServerResponse.createByErrorMessage("用户已存在，请登录！");
+        }
+
         if (user.insert()){
-            return ServerResponse.createBySuccessMessage("注册成功");
+            //注册得数据存入到Session中用于鉴定是否存在已经登录得标志
+            session.setAttribute(Const.CURRENT_USER,user);
+            return ServerResponse.createBySuccessMessage("注册成功，点击跳转首页！");
         }else{
-            return ServerResponse.createByError();
+            return ServerResponse.createByErrorMessage("服务器瘫痪了，请联系管理员！");
         }
     }
 
