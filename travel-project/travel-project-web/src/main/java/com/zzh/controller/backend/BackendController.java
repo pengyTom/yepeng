@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin")
 public class BackendController {
 
-
-
+    /**
+     * 管理员后台登录
+     * @param model
+     * @return
+     */
     @RequestMapping("/index")
     public String indexView(Model model){
 
@@ -57,6 +60,5 @@ public class BackendController {
     public String fileupload(){
         return "backend/fileupload";
     }
-
 
 }

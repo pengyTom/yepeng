@@ -45,7 +45,7 @@
             <span>&nbsp;&nbsp;</span>
             <span class="reg"><a href="http://localhost:80/register" style="font-size: 16px">注册</a> </span>
             <span>&nbsp;&nbsp;</span>
-            <span><a href="http://localhost:80/user/admin/login" style="font-size: 16px;color: #0e8f61">管理员专属</a> </span>
+            <span><a href="http://localhost:80/admin/index" style="font-size: 16px;color: #0e8f61">管理员专属</a> </span>
         </c:if>
         <c:if test="${ sessionScope.currentUser!=null }">
             <span class="reg"><a href="http://localhost:80/user/updateView">个人中心</a></span>
