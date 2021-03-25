@@ -41,8 +41,11 @@
     <div class="col-md-2 col-xs-2 share">
         <!--登录的逻辑-->
         <c:if test="${ sessionScope.currentUser==null }">
-            <span class="login">登录</span>
-            <span class="reg"><a href="http://localhost:80/register">注册</a> </span>
+            <span class="login" style="color: #c0a16b;font-size: 16px">登录</span>
+            <span>&nbsp;&nbsp;</span>
+            <span class="reg"><a href="http://localhost:80/register" style="font-size: 16px">注册</a> </span>
+            <span>&nbsp;&nbsp;</span>
+            <span><a href="http://localhost:80/user/admin/login" style="font-size: 16px;color: #0e8f61">管理员专属</a> </span>
         </c:if>
         <c:if test="${ sessionScope.currentUser!=null }">
             <span class="reg"><a href="http://localhost:80/user/updateView">个人中心</a></span>
@@ -58,7 +61,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                         <span>&times;</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">登录</h4>
+                    <h4 class="modal-title" id="myModalLabel" align="center">欢迎登录环球旅游</h4>
                 </div>
                 <div class="modal-body" >
 
@@ -75,7 +78,8 @@
                         </div>
                     </div>
                     <div class="fpsd">
-                        <a href="http://localhost:80/user/message">忘记密码</a>
+                        <h5 align="center"><a id="login_ma" style="color: #0c9076">立即登录</a></h5>
+                        <a href="http://localhost:80/user/message" style="font-size: 12px;color: #8a6d3b">忘记密码？</a>
                     </div>
                 </div>
 
@@ -86,7 +90,7 @@
 
 </body>
 <script type="text/javascript">
-    $(function valid(){
+   /* $(function valid(){
         $('#password').keydown(function(event) {
             if (event.keyCode == 13) {
                 var username = $("#username").val();//取值
@@ -114,6 +118,34 @@
                 });
             }
         });
+    });*/
+
+    <!--登录逻辑的概述-->
+    $("#login_ma").click(function(){
+        var username = $("#username").val();//取值
+        var password = $("#password").val();
+        if(!username){
+            alert("用户名必填!");
+            $("#username").focus();//获取焦点
+            return false;
+        }
+        if(!password){
+            alert("密码必填!");
+            $("#password").focus();//获取焦点
+            return false;
+        }
+        var param = {"username":username,"password":password};
+        console.log(param);
+        $.post("http://localhost:80/user/login",param,function(result){
+            if(result.status==200){
+                $("#myModal").modal("hide");
+                alert("登录成功");
+                window.location.href="http://localhost:80/indexView";
+            }else{
+                alert("用户名或密码错误");
+            }
+        });
     });
+
 </script>
 </html>
