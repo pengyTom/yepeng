@@ -111,12 +111,12 @@
     <div class="orage">
         <h3 class="section_title">
             主题活动
-            <a href="#" class="more">更多主题活动</a>
+            <a class="more" id="theme_more">更多主题活动</a>
         </h3>
         <div class="species">
             <ul class="list-species">
                 <li>
-                    <a href="/Search/index/product/3/ticketCategory/2">
+                    <a href="http://localhost:80/user/message">
                         <img class="lazy" src="../images/banner-05.png" data-original="../images//banner-05.png" style="display: inline;">
                         <div class="kind">
                         <b>游乐园&gt;</b>
@@ -124,7 +124,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/Search/index/product/4">
+                    <a href="http://localhost:80/user/message">
                         <img class="lazy" src="../images//banner-06.png" data-original="../images//banner-06.png" style="display: inline;">
                         <div class="kind">
                         <b>温泉&gt;</b>
@@ -132,7 +132,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/Search/index/product/3/ticketCategory/3">
+                    <a href="http://localhost:80/user/message">
                         <img class="lazy" src="../images//banner-07.png" data-original="../images//banner-07.png" style="display: inline;">
                         <div class="kind">
                         <b>古城美食&gt;</b>
@@ -140,7 +140,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/Search/index/product/2">
+                    <a href="http://localhost:80/user/message">
                         <img class="lazy" src="../images//banner-08.png" data-original="../images//banner-08.png" style="display: inline;">
                         <div class="kind">
                         <b>特色活动&gt;</b>
@@ -148,7 +148,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/Search/index/product/1">
+                    <a href="http://localhost:80/user/message">
                         <img class="lazy" src="../images//banner-09.png" data-original="../images//banner-09.png" style="display: inline;">
                         <div class="kind">
                         <b>更多种类&gt;</b>
@@ -209,7 +209,7 @@
     <div id="themeTour">
         <h3 class="section_title">
             目的地
-            <a href="#" class="more">更多>>></a>
+            <a class="more">更多>>></a>
         </h3>
         <div class="themeTourItem">
             <img src="../images/15_d.jpg">
@@ -280,11 +280,31 @@
     $("#searchInput").keyup(function(){
 
         if(event.keyCode == 13){
-
             window.location.href="http://localhost:80/productlistView";
-
         }
     });
+
+    //登录权限的限定
+    $("#theme_more").click(function(){
+
+        alert("您还未登录，请先登录！");
+    });
+
+    //登录权限的限定
+    $(".more").click(function(){
+        alert("您还未登录，请先登录！");
+    });
+
+
+<%--<c:if test="${ sessionScope.currentUser==null }">
+    <script>
+    alert("未登录，请先登录");
+    window.location.href="http://localhost:80/indexView";
+</script>
+</c:if>--%>
+
+
+
 </script>
 </body>
 </html>
