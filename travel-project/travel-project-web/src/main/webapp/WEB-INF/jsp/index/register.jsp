@@ -53,7 +53,7 @@
                 </div>
                 <!--性别-->
                 <div class="form-group">
-                    <label for="male" style="font-family: '微软雅黑','黑体','宋体';background-color:#E7EAEB">性别:</label>
+                    <label for="male" style="font-family: '微软雅黑','黑体','宋体';background-color:#E7EAEB;color: #adadad">性别:</label>
                        <label class="radio-inline">
                            <input type="radio" value="male" name="sex" checked="checked" id="male">男
                        </label>
