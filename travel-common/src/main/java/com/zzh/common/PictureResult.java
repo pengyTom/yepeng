@@ -1,9 +1,6 @@
 package com.zzh.common;
 /**
  * 上传图片返回值，后台,图片上传功能的实现
- * <p>Title: PictureResult</p>
- * <p>Description: </p>
- * @version 1.0
  */
 public class PictureResult {
 

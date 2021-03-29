@@ -9,8 +9,6 @@ import java.io.*;
 
 /**
  * ftp上传下载工具类
- * <p>Title: FtpUtil</p>
- * <p>Description: </p>
  * @version 1.0
  */
 public class FtpUtil {
