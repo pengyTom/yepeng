@@ -16,19 +16,19 @@
 	</bean>
 	<!-- 通知 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<!-- 定义管理的方式，满足条件命名都能被处理-->
-			<tx:method name="save*" propagation="REQUIRED" />
-			<tx:method name="insert*" propagation="REQUIRED" />
-			<tx:method name="add*" propagation="REQUIRED" />
-			<tx:method name="create*" propagation="REQUIRED" />
-			<tx:method name="delete*" propagation="REQUIRED" />
-			<tx:method name="update*" propagation="REQUIRED" />
-			<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
-			<tx:method name="select*" propagation="SUPPORTS" read-only="true" />
-			<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
-		</tx:attributes>
-	</tx:advice>
+	<tx:attributes>
+		<!-- 定义管理的方式，满足条件命名都能被处理-->
+		<tx:method name="save*" propagation="REQUIRED" />
+		<tx:method name="insert*" propagation="REQUIRED" />
+		<tx:method name="add*" propagation="REQUIRED" />
+		<tx:method name="create*" propagation="REQUIRED" />
+		<tx:method name="delete*" propagation="REQUIRED" />
+		<tx:method name="update*" propagation="REQUIRED" />
+		<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+		<tx:method name="select*" propagation="SUPPORTS" read-only="true" />
+		<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
+	</tx:attributes>
+</tx:advice>
 	<!-- 切面 -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"

@@ -96,7 +96,6 @@
             if(data.status==200){
                 alert("设置成功" );
             }
-
         })
     }
 </script>
