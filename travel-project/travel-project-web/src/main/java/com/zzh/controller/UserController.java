@@ -1,23 +1,23 @@
 package com.zzh.controller;
 
 
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.zzh.common.Const;
-import com.zzh.common.ServerResponse;
-import com.zzh.entity.EmailValidate;
-import com.zzh.entity.User;
-import com.zzh.service.IEmailValidateService;
-import com.zzh.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+        import com.baomidou.mybatisplus.mapper.EntityWrapper;
+        import com.baomidou.mybatisplus.mapper.Wrapper;
+        import com.zzh.common.Const;
+        import com.zzh.common.ServerResponse;
+        import com.zzh.entity.EmailValidate;
+        import com.zzh.entity.User;
+        import com.zzh.service.IEmailValidateService;
+        import com.zzh.service.IUserService;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.ui.Model;
+        import org.springframework.web.bind.annotation.PostMapping;
+        import org.springframework.web.bind.annotation.RequestMapping;
+        import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpSession;
-import java.util.Date;
+        import javax.servlet.http.HttpSession;
+        import java.util.Date;
 
 /**
  *  前端控制器
@@ -59,11 +59,11 @@ public class UserController {
         //0 超级管理员   1 管理员   10 普通游客
         user.setRole(10);
 
-       if (user1!=null){
-           if (user.getEmail().equals(user1.getEmail())){
-               return ServerResponse.createByErrorMessage("用户已存在，请登录！");
-           }
-       }
+        if (user1!=null){
+            if (user.getEmail().equals(user1.getEmail())){
+                return ServerResponse.createByErrorMessage("用户已存在，请登录！");
+            }
+        }
 
         //正则邮箱
         String reg_email="\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
@@ -125,12 +125,12 @@ public class UserController {
         if (response.isSuccess()){
             //1超级管理员   10 普通用户
             User user = response.getData();
-           if (user!=null){
-               if (user.getRole()>=10){
-                   return ServerResponse.createByErrorMessage("请登录管理员用户");
-               }
-           }
-           //管理员账户存入到session中
+            if (user!=null){
+                if (user.getRole()>=10){
+                    return ServerResponse.createByErrorMessage("请登录管理员用户");
+                }
+            }
+            //管理员账户存入到session中
             session.setAttribute(Const.ADMIN_USER,response.getData());
         }
         return  response;
