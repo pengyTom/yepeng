@@ -55,7 +55,7 @@ public class CustomizedManageController {
     *
     * */
 
-    @RequestMapping("list")
+    @RequestMapping("/list")
     @ResponseBody
     public ServerResponse list(String status, @RequestParam(value="current",defaultValue="1") int current, @RequestParam(value="size",defaultValue="10") int size){
         if (current<=0||size<=0){

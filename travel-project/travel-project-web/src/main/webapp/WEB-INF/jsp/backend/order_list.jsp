@@ -22,13 +22,13 @@
             <tr>
                 <th>订单号</th>
                 <th>下单用户</th>
-                <th>用户联系号码</th>
-                <th>商品id</th>
+                <th>联系方式</th>
+                <th>商品编号</th>
                 <th>商品数量</th>
                 <th>订单金额</th>
                 <th>支付时间</th>
                 <th>订单状态</th>
-                <th>操作</th>
+                <th>订单详情</th>
             </tr>
             </thead>
             <tbody id="showtable">
@@ -69,7 +69,7 @@
                     first: '<li class="first"><a href="javascript:void(0);">首页</a></li>',
                     prev: '<li class="prev"><a href="javascript:void(0);">上一页</a></li>',
                     next: '<li class="next"><a href="javascript:void(0);">下一页</a></li>',
-                    last: '<li class="last"><a href="javascript:void(0);">页尾</a></li>',
+                    last: '<li class="last"><a href="javascript:void(0);">尾页</a></li>',
                     page: '<li class="page"><a href="javascript:void(0);">{{page}}</a></li>',
                     onPageChange: function (pageIndex) {
 
@@ -92,7 +92,7 @@
                                 $.each(data.records,function(i,item){
                                     var edtior="<td class='center'><a href='http://localhost:80/manager/productOrder/detailView/"+item.id+"' title='查看' class='link_icon'>&#118;</a> </td>";
                                     showTableHtml += "<tr>"+
-                                        "<td style=\"padding-left: 20px;\">"+item.orderNo+"</td>"+
+                                        "<td style=\"padding-left: 20px; text-align: center\">"+item.orderNo+"</td>"+
                                         "<td style='text-align: center;'>"+item.username+"</td>"+
                                         "<td style='text-align: center;'>"+item.phone+"</td>"+
                                         "<td style='text-align: center;'>"+item.productId+"</td>"+

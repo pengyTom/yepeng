@@ -17,24 +17,24 @@
     <div class="rt_content">
         <div class="page_title">
             <h2 class="fl">会员列表</h2>
-            <a href="user_detail.html" class="fr top_rt_btn add_icon">添加新会员</a>
+            <a href="http://localhost:80/manager/user/addUserView" class="fr top_rt_btn add_icon">添加新会员</a>
         </div>
         <section class="mtb">
 
-            <input type="text" id="keyword" class="textbox textbox_225" placeholder="输入会员号/手机/电子邮件查询..." />
+            <input type="text" id="keyword" class="textbox textbox_225" placeholder="输入会员账户/手机/电子邮箱查询..." />
             <input type="button" value="查询" class="group_btn" onclick="subForm()"/>
         </section>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th><input type="checkbox"></th>
-                    <th>用户账号</th>
-                    <th>用户密码</th>
+                    <th>会员账号</th>
+                    <th>会员密码</th>
                     <th>手机号码</th>
-                    <th>电子邮件</th>
+                    <th>电子邮箱</th>
                     <th>性别</th>
                     <th>创建时间</th>
-                    <th>操作</th>
+                    <th>详情</th>
                 </tr>
             </thead>
             <tbody id="showtable">

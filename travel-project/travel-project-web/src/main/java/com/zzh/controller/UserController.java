@@ -68,12 +68,12 @@ public class UserController {
         //正则邮箱
         String reg_email="\\w+(\\w|[.]\\w+)+@\\w+([.]\\w+){1,3}";
         if (!user.getEmail().matches(reg_email)){
-            return ServerResponse.createBySuccessMessage("邮箱格式不对！");
+            return ServerResponse.createByErrorMessage("邮箱格式不对！");
         }
         //正则手机号
         String reg_phone="(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-8]|18[0-9]|19[0-9])\\d{8}";
         if (!user.getPhone().matches(reg_phone)){
-            return ServerResponse.createBySuccessMessage("手机号格式不对！");
+            return ServerResponse.createByErrorMessage("手机号格式不对！");
         }
 
         if (user.insert()){

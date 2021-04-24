@@ -52,7 +52,7 @@
             <dl>
                 <dt>商品信息</dt>
                 <!--当前链接则添加class:active-->
-                <dd><a href="http://localhost:80/manager/product/listView" class="active">商品列表示例</a></dd>
+                <dd><a href="http://localhost:80/manager/product/listView" class="active">商品列表</a></dd>
                 <dd><a href="http://localhost:80/manager/product/addView">添加商品</a></dd>
             </dl>
         </li>
@@ -79,7 +79,7 @@
         <li>
             <dl>
                 <dt>订单信息</dt>
-                <dd><a href="http://localhost:80/manager/productOrder/listView">订单列表示例</a></dd>
+                <dd><a href="http://localhost:80/manager/productOrder/listView">订单列表</a></dd>
 
             </dl>
         </li>

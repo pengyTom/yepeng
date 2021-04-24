@@ -29,7 +29,7 @@ public class ProductManageOrderController {
     public ServerResponse list(String keyword, @RequestParam(value="current",defaultValue="1") int current, @RequestParam(value="size",defaultValue="10") int size){
         EntityWrapper entityWrapper=new EntityWrapper();
         if (keyword!=null&!"".equals(keyword)){
-            entityWrapper.eq("order_no",keyword).or().eq("username",keyword);
+            entityWrapper.eq("order_no",keyword).or().like("username",keyword).or().eq("phone",keyword);
             entityWrapper.orderBy("create_time",false);
         }
 

@@ -17,13 +17,13 @@
             <div class="form-group">
                 <label  class="col-sm-2 control-label">主题名称</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="themeName" name="themeName" placeholder="themeName" value="${theme.themeName}">
+                    <input type="text" class="form-control" id="themeName" name="themeName" placeholder="请输入主题名称" value="${theme.themeName}">
                 </div>
             </div>
             <div class="form-group">
-                <label  class="col-sm-2 control-label">简介</label>
+                <label  class="col-sm-2 control-label">主题简介</label>
                 <div class="col-sm-4">
-                    <textarea class="form-control" rows="3" id="detail" name="detail">${theme.detail}</textarea>
+                    <textarea class="form-control" rows="3" id="detail" placeholder="最多支持200个字" name="detail">${theme.detail}</textarea>
                 </div>
             </div>
             <div class="form-group">

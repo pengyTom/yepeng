@@ -68,8 +68,8 @@
                 </div>
                 <div class="user_form_list">
                     <label  class="label_txt">性别：</label>
-                    <input name="sex" type="radio" value="女"  ${user.sex =='女'? 'checked' : ""}  />女
-                    <input name="sex" type="radio" value="男" ${user.sex =='男'? 'checked':"" }  />男
+                    <input name="sex" type="radio" value="女"  ${user.sex =='female'? 'checked' : ""}  />女
+                    <input name="sex" type="radio" value="男" ${user.sex =='male'? 'checked':"" }  />男
                 </div>
 
                 <div class="user_form_list">
