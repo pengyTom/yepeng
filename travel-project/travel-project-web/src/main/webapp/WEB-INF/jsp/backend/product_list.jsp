@@ -10,7 +10,7 @@
 <section class="rt_wrap content mCustomScrollbar">
     <div class="rt_content">
         <div class="page_title">
-            <h2 class="fl">产品列表</h2>
+            <h2 class="fl">在售产品列表</h2>
         </div>
         <section class="mtb">
 
@@ -123,7 +123,7 @@
                                         "<td style='text-align: center;'>"+item.activeDays+"</td>"+
                                         "<td style='text-align: center;'>"+item.startAreaname+"</td>"+
                                         "<td style='text-align: center;'>"+item.endAreaname+"</td>"+
-                                        "<td style='text-align: center;'><a href='http://localhost:80/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 更新</a>    <a href='http://localhost:80/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
+                                        "<td style='text-align: center;'><a href='http://localhost:80/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 同款套餐新增</a>    <a href='http://localhost:80/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
                                         "<td style='text-align: center;'>"+item.createTime+"</td>"+
                                         edtior+"</tr>";
                                 });
@@ -206,7 +206,7 @@
                                     $.each(data.records,function(i,item){
                                         var edtior="<td class='center'><a href='http://localhost:80/manager/product/updateView/"+item.pid+"' title='编辑' class='link_icon'>&#101;</a><a  title='删除' class='link_icon'value='"+item.pid+"' onclick='del(this)'>&#100;</a> </td>";
                                         showTableHtml += "<tr>"+
-                                                /*"<th><input type='checkbox' name='id' value="+item.title+"></th>"+*/
+                                            "<th><input type='checkbox' name='id' value="+item.title+"></th>"+
                                             "<td style=\"padding-left: 20px;max-width: 200px;\">"+item.title+"</td>"+
                                             "<td style=\"padding-left: 20px;\">"+item.price+"</td>"+
                                             "<td style='text-align: center;'>"+item.activeDays+"</td>"+

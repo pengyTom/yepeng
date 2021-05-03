@@ -79,8 +79,8 @@
         var startDate=$("#startDate").val();
 
         if(!days){
-            alert("新增连续天数!");
-            $("#price").focus();//获取焦点
+            alert("新增连续天数必填!");
+            $("#days").focus();//获取焦点
             return false;
         }
 
@@ -101,7 +101,7 @@
         }
         if(!startDate){
             alert("开始日期必填!");
-            $("#stock").focus();//获取焦点
+            $("#startDate").focus();//获取焦点
             return false;
         }
 
