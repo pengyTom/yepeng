@@ -78,23 +78,29 @@
         var days = $("#days").val();
         var startDate=$("#startDate").val();
 
-        if(!price){
-            alert("名称必填!");
+        if(!days){
+            alert("新增连续天数!");
             $("#price").focus();//获取焦点
             return false;
         }
+
+        if (days&&days>30) {
+            alert("新增连续天数不能超过30天！")
+            return false;
+        }
+
         if(!stock){
-            alert("简介必填!");
+            alert("库存必填!");
             $("#stock").focus();//获取焦点
             return false;
         }
         if(!price){
-            alert("名称必填!");
+            alert("价格必填!");
             $("#price").focus();//获取焦点
             return false;
         }
-        if(!stock){
-            alert("简介必填!");
+        if(!startDate){
+            alert("开始日期必填!");
             $("#stock").focus();//获取焦点
             return false;
         }
