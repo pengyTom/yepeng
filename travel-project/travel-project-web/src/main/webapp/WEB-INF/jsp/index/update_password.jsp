@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>个人信息</title>
+    <title>密码更新</title>
     <link rel="stylesheet" href="/css/allstyle.css" />
 </head>
 <body>
@@ -46,7 +46,7 @@
         <!--用户中心左侧菜单-->
         <ul class="userinfo_left fl">
             <li class="active" ><span class="icon_user"></span><a href="http://localhost:80/user/updateView">个人信息</a></li>
-            <li  ><span class="icon_msg"></span><a href="javascript:void(0);">我的消息</a></li>
+            <li  ><span class="icon_msg"></span><a href="http://localhost:80/user/message">我的消息</a></li>
             <li  ><span class="icon_order"></span><a href="http://localhost:80/productOrder/orderView">我的订单</a></li>
             <li  ><span class="icon_custom"></span><a href="http://localhost:80/customization/listView">我的定制</a></li>
 
@@ -56,32 +56,33 @@
         <div class="userinfo_right fr">
             <ul class="user_right_nav">
                 <li class="user_right_tab active"><a href="javascript:void(0);">信息修改</a></li>
-                <li class="user_right_tab"><a href="http://localhost:80/user/message">账号绑定</a></li>
+                <li class="user_right_tab"><a href="javascript:void(0);">账号绑定</a></li>
                 <li class="user_right_tab"><a href="http://localhost:80/user/updatePassword">密码修改</a></li>
             </ul>
 
-            <form id="form1"  method="post" onsubmit=" false" class="user_information">
+            <form id="form2"  method="post" onsubmit=" false" class="user_information">
                 <input type="hidden" name="id" value="${user.id}" />
                 <div class="user_form_list">
-                    <label  class="label_txt">我的昵称：</label>
-                    <input type="text" name="username" value="${user.username}" class="user_inputxt" />
-                </div>
-                <div class="user_form_list">
-                    <label  class="label_txt">性别：</label>
-                    <input name="sex" type="radio" value="female"  ${user.sex =='female'? 'checked':""} readonly="readonly"/>女
-                    <input name="sex" type="radio" value="male" ${user.sex =='male'? 'checked':"" }  readonly="readonly"/>男
+                    <label  class="label_txt">私人邮箱：</label>
+                    <input type="text" name="email" value="${user.email}" class="user_inputxt" readonly="readonly"/>
                 </div>
 
                 <div class="user_form_list">
-                    <label  class="label_txt">手机号：</label>
-                    <input type="text" name="phone" value="${user.phone}" class="user_inputxt" />
-                </div>
-                <div class="user_form_list">
-                    <label  class="label_txt">电子邮箱：</label>
-                    <input type="email" name="email" value="${user.email}" class="user_inputxt"/>
+                    <label  class="label_txt">私人账户：</label>
+                    <input type="text" name="username" value="${user.username}" class="user_inputxt" readonly="readonly"/>
                 </div>
 
-                <input type="button"  value="保存" class="userinfo_form_btn subbtn" onclick="updta()">
+                <div class="user_form_list">
+                    <label  class="label_txt">新密码：</label>
+                    <input type="text" name="oldPassword" value="" class="user_inputxt" />
+                </div>
+
+                <div class="user_form_list">
+                    <label  class="label_txt">确认密码：</label>
+                    <input type="email" name="newPassword" value="" class="user_inputxt" />
+                </div>
+
+                <input type="button"  value="提交更新" class="userinfo_form_btn subbtn" onclick="updta()">
             </form>
         </div>
     </div>
@@ -118,29 +119,37 @@
         var reg=/^1[3|4|5|8|7][0-9]\d{4,8}$/;
         var reges=/^0\d{2,3}-?\d{7,8}$/;
         var username=$('input[name="username"]').val();
-        var phone=$('input[name="phone"]').val();
-        var email=$('input[name="email"]').val();
+        var oldPassword=$('input[name="oldPassword"]').val();
+        var newPassword=$('input[name="newPassword"]').val();
         if(username == ""){
-            alert("用户名不能为空");
+            alert("用户名不能为空!");
             return false;
         }
-        if(phone == ""){
-            alert("手机号码不能为空");
+        if(oldPassword == ""){
+            alert("新密码不能为空!");
             return false;
         }
-        if(email == ""){
-            alert("邮箱不能为空");
+        if(newPassword == ""){
+            alert("确认密码不能为空!");
             return false;
         }
-        if(!reg.test(phone)&&!reges.test(phone)){
-            alert("输入的号码不正确");
+
+        if (!(newPassword==oldPassword)) {
+            alert("两次输入密码不一样，请重新输入!");
             return false;
         }
-        var param = $("#form1").serialize();;
+
+        var param = $("#form2").serialize();;
         console.log(param);
-        $.post("http://localhost:80/user/update",param,function(result){
-            if(result.success){
-                alert("更新成功");
+        /*密码修改页面*/
+        $.post("http://localhost:80/user/updatePasswordView",
+            param,
+            function(result){
+            if(result.status==200){
+                alert("密码修改成功，请重新登录！");
+                window.location.href="http://localhost:80/indexView";
+            }else {
+                alert(result.msg)
             }
         });
 

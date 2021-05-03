@@ -80,7 +80,7 @@
                     </div>
                     <div class="fpsd">
                         <h5 align="center"><a id="login_ma" style="color: #0c9076">立即登录</a></h5>
-                        <a href="http://localhost:80/user/message" style="font-size: 12px;color: #8a6d3b">忘记密码？</a>
+                        <a href="javascript:void(0);" style="font-size: 12px;color: #8a6d3b">忘记密码？</a>
                     </div>
                 </div>
 

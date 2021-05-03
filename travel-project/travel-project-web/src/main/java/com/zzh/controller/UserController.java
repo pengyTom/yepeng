@@ -9,6 +9,7 @@ package com.zzh.controller;
         import com.zzh.entity.User;
         import com.zzh.service.IEmailValidateService;
         import com.zzh.service.IUserService;
+        import org.apache.commons.lang3.StringUtils;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.stereotype.Controller;
         import org.springframework.ui.Model;
@@ -139,6 +140,9 @@ public class UserController {
     @RequestMapping("/update")
     @ResponseBody
     public ServerResponse update(User user){
+        if (user!=null){
+            user.setUpdateTime(new Date());
+        }
         return ServerResponse.createByResult(userService.updateById(user));
     }
 
@@ -177,5 +181,65 @@ public class UserController {
 
         return "index/message";
     }
+
+
+    /**
+     * 修改密码功能
+     * @param session
+     * @param newPassword
+     * @return
+     */
+    @RequestMapping("/updatePasswordView")
+    @ResponseBody
+    public ServerResponse updatePassword(HttpSession session,String newPassword,String oldPassword){
+        //获取到对应的用户对象信息
+        User user = (User)session.getAttribute(Const.CURRENT_USER);
+        if (user==null){
+            return ServerResponse.createByErrorMessage("当前用户未登录！");
+        }
+
+        if (StringUtils.isEmpty(newPassword)){
+            return ServerResponse.createByErrorMessage("确认密码为空！");
+        }
+
+        if (StringUtils.isEmpty(oldPassword)){
+            return ServerResponse.createByErrorMessage("新密码为空!");
+        }
+
+        if (!oldPassword.equals(newPassword)){
+            return ServerResponse.createByErrorMessage("两次密码不一致，请重新输入!");
+        }
+
+        //开始更新用户的密码信息--验证用户账户邮箱的合法性
+        EntityWrapper<User> userEntityWrapper=new EntityWrapper<>();
+        //实体条件被包装成一条Sql对象，最终通过sql进行查询数据
+        Wrapper<User> user_email = userEntityWrapper.eq("email", user.getEmail());
+        User user1 = userService.selectOne(user_email);
+        if (user1!=null){
+            user1.setPassword(newPassword);
+            user1.setUpdateTime(new Date());
+            //更新新的密码
+            if (userService.updateById(user1)){
+                //杀死当前用户进程信息,登录失效
+                session.invalidate();
+                return ServerResponse.createBySuccessMessage("密码修改成功，请重新进行登录！");
+            }
+        }
+
+        return ServerResponse.createByErrorMessage("当前登录信息有误，请联系管理员!");
+    }
+
+    /**
+     * 用户密码更新操作
+     * @return
+     */
+    @RequestMapping("/updatePassword")
+    public String passwordUpdate(HttpSession session,Model model){
+        //数据先从session中进行获取，数据也需要带入到新的页面中，存在的服务中
+        User user = (User)session.getAttribute(Const.CURRENT_USER);
+        model.addAttribute("user",user);
+        return "index/update_password";
+    }
+
 }
 
