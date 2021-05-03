@@ -19,7 +19,10 @@
     <!--顶部用户资料显示-->
     <div class="user_info_bg">
         <div class="user_info_portrait">
-            <p class="user_info_name"><span>客户:${user.username}</span></p>
+
+            <p class="user_info_name"><span>VIP专属:${user.username}</span></p>
+            <p class="user_info_name"><span>心有琴弦，纵然客去茶凉，仍有小曲缓缓响起，仍有满树桂花知音而化为酒香。</span></p>
+
         </div>
         <div class="user_info_msg">
 	        <span>性别：${user.sex}</span>

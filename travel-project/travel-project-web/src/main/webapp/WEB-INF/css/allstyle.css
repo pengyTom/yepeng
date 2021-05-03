@@ -1496,7 +1496,7 @@ ul.attention li .qrcode_txt{ text-align: center; font-weight: bold;}
 .user_info_msg span { display: inline-block; margin-left: 200px; }
 .user_info_cont { padding: 30px 0 30px 15px; background-color: #fff; min-height: 500px;}
 .userinfo_left{ width: 160px; padding: 2px 0; background: #f0efed;}
-.userinfo_left li {text-align: center;height: 42px;line-height: 42px}
+.userinfo_left li {text-align: center;height: 100px;line-height: 42px}
 .userinfo_left li.active { background-color: #fff; border-left: 2px solid #80c269;}
 .userinfo_left li a { font-size: 15px; color: #777 }
 .userinfo_left li span, .icon_location { display: inline-block; width: 30px; height: 21px; }
@@ -1510,11 +1510,11 @@ ul.attention li .qrcode_txt{ text-align: center; font-weight: bold;}
 .userinfo_right{ width: 870px;}
 .user_right_nav {height: 40px;line-height: 40px;background-color: #f0efed; font-size: 12px;}
 .user_right_tab {display: inline-block;*zoom: 1;
-    *display: inline; width: 140px;text-align: center;color: #666;}
+    *display: inline; width: 280px;text-align: center;color: #666;}
 .user_right_tab a {color: #666;}
 .user_right_tab.active {background-color: #fff;border-top: 2px solid #80c269;}
 
-.user_information { padding: 50px 15px 50px 185px;}
+.user_information { padding: 5px 15px 50px 185px;}
 /*头像上传*/
 .user_img_upload { width:60px; height:60px; position: relative;margin-left: 100px}
 .user_img_upload .icon_camera {width: 20px; height: 20px;position: absolute;left: 20px;
