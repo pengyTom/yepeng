@@ -26,7 +26,7 @@
                 <th>活动天数</th>
                 <th>出发地</th>
                 <th>目的地</th>
-                <th>对应产品销售操作</th>
+                <th>产品操作</th>
                 <th>创建时间</th>
                 <th>操作</th>
             </tr>
@@ -123,7 +123,7 @@
                                         "<td style='text-align: center;'>"+item.activeDays+"</td>"+
                                         "<td style='text-align: center;'>"+item.startAreaname+"</td>"+
                                         "<td style='text-align: center;'>"+item.endAreaname+"</td>"+
-                                        "<td style='text-align: center;'><a href='http://localhost:8080/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 新增</a>    <a href='http://localhost:8080/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
+                                        "<td style='text-align: center;'><a href='http://localhost:80/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 更新</a>    <a href='http://localhost:80/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
                                         "<td style='text-align: center;'>"+item.createTime+"</td>"+
                                         edtior+"</tr>";
                                 });
@@ -212,7 +212,7 @@
                                             "<td style='text-align: center;'>"+item.activeDays+"</td>"+
                                             "<td style='text-align: center;'>"+item.startAreaname+"</td>"+
                                             "<td style='text-align: center;'>"+item.endAreaname+"</td>"+
-                                            "<td style='text-align: center;'><a href='http://localhost:80/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 新增</a>    <a href='http://localhost:8080/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
+                                            "<td style='text-align: center;'><a href='http://localhost:80/manager/productSell/addView?pid="+item.pid+"&title="+item.title+"&price="+item.price+"'> 更新</a>    <a href='http://localhost:80/manager/productSell/listView/"+item.pid+"'> 查看</a></td>"+
                                             "<td style='text-align: center;'>"+item.createTime+"</td>"+
                                             edtior+"</tr>";
                                     });

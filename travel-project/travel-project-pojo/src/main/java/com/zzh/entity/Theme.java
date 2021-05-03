@@ -13,6 +13,7 @@ public class Theme extends Model<Theme> {
 
     private static final long serialVersionUID = 1L;
 
+    /*数据库得自增Id，存储得时候根据Id顺序来进行存储，a-98 A-65 0-48*/
     @TableId(value = "id", type = IdType.UUID)
     private String id;
     private String themeName;
