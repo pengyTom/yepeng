@@ -1510,7 +1510,7 @@ ul.attention li .qrcode_txt{ text-align: center; font-weight: bold;}
 .userinfo_right{ width: 870px;}
 .user_right_nav {height: 40px;line-height: 40px;background-color: #f0efed; font-size: 12px;}
 .user_right_tab {display: inline-block;*zoom: 1;
-    *display: inline; width: 280px;text-align: center;color: #666;}
+    *display: inline; width: 140px;text-align: center;color: #666;}
 .user_right_tab a {color: #666;}
 .user_right_tab.active {background-color: #fff;border-top: 2px solid #80c269;}
 

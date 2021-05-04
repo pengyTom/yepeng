@@ -58,7 +58,7 @@
                             <tr>
                                 <td class="theme_td_txt">
                                     <span class="need">*</span>
-                                    出发时间：
+                                    订购时间：
                                 </td>
                                 <td>
                                     <input type="text"  class="user_inputxt" datatype="*" nullmsg="请选择时间！" errormsg="时间不能为空！" placeholder="<fmt:formatDate value="${productSell.startDate}" pattern="yyyy-MM-dd"/>" readonly/>
@@ -92,7 +92,7 @@
                                     手机号：
                                 </td>
                                 <td>
-                                    <input type="text" class="user_inputxt" name="phone" datatype="m" nullmsg="请输入您的手机号码！" errormsg="手机号码格式不正确！" placeholder="例如：18311251523">
+                                    <input type="text" class="user_inputxt" name="phone" datatype="m" nullmsg="请输入您的手机号码！" errormsg="手机号码格式不正确！" placeholder="例如：183XXXX1523">
                                 </td>
                                 <td>
                                     <div class="Validform_checktip"></div>
@@ -179,10 +179,19 @@
             alert("请填写联系人");
             return ;
         }
+
         if (phone==""){
             alert("请填写手机号码");
             return ;
         }
+
+        /*验证手机号格式问题 \d表示转义字符*/
+        if(!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(phone))){
+            alert("手机格式有误，请重填!");
+            return ;
+        }
+
+
         var data = $("#form1").serialize();
         data= decodeURIComponent(data,true);
         console.log(data);

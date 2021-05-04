@@ -78,7 +78,8 @@
 
             <!--分页-->
             <div class="page">
-                <div>   <span class="omit">...</span>  </div>				</div>
+                <div>   <span class="omit">...</span>  </div>
+            </div>
             <!--分页 end-->
         </div>
     </div>
