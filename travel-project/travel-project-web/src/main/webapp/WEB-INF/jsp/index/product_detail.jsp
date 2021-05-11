@@ -180,7 +180,7 @@
                },
                success : function(result) {//返回数据根据结果进行相应的处理
                    if ( result.success ) {
-                       alert('购买成功');
+                       alert('支付成功');
                    } else {
                        alert(result.msg);
                    }

@@ -21,7 +21,7 @@
 </style>
 <script>
     function openUrl() {
-        alert("请联系客服小姐姐，热线电话:88888");
+        alert("请联系客服小姐姐，热线电话:0795-6532");
         /*window.open("http://wpa.qq.com/msgrd?v=3&uin=2110825316&site=qq&menu=yes","_blank");*/
     }
 
@@ -36,7 +36,7 @@
             </li>
             <li class="navigation_item nav_item2"><a class="navigation_style" href="http://localhost:80/plistView">旅游产品</a></li>
             <li class="navigation_item nav_item3"><a class="navigation_style" href="http://localhost:80/customized">服务定制</a></li>
-            <li class="navigation_item nav_item4"><a href="javascript:void(0);" class="navigation_style"   onclick="openUrl()">咨询</a></li>
+            <li class="navigation_item nav_item4"><a href="javascript:void(0);" class="navigation_style"   onclick="openUrl()">客服咨询</a></li>
         </ul>
     </div>
     <div class="col-md-2 col-xs-2 share">
