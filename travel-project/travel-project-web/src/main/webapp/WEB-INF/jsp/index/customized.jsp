@@ -338,7 +338,7 @@
     });
     //    表单认证
     function cusApprove(cusForm){
-        var reg=/^1[3|4|5|8|7][0-9]\d{4,8}$/;
+        var reg=/^1[3456789]\d{9}$/;
         var reges=/^0\d{2,3}-?\d{7,8}$/;
         var cusDepart=cusForm.find(".start_place").val();
         var cusLand=cusForm.find(".cus-land").val();
@@ -360,7 +360,7 @@
             alert("联系电话不能为空");
             return false;
         }
-        if(!reg.test(cusPhone)&&!reges.test(cusPhone)){
+        if(!reg.test(cusPhone)){
             alert("输入的号码不正确");
             return false;
         }
